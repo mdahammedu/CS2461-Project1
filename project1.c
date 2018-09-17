@@ -164,8 +164,14 @@ int ques5(int x) {
 
 int ques6(void) {
     int byte = 0x55;
+    /*
+    Essential concatinated two 'bytes' by moving 8 digits and adding byte
+    into the 0's
+     */
     int word = byte | byte<<8;
-
+    /*
+    Does the same thing as word, so it makes 'byte' concatinated 4 times
+    */
     return word | word<<16;
 }
 
