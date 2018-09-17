@@ -298,6 +298,15 @@ int ans11(int x,int y)
 }
 
 /* question 12 */
+/* a is taking the complelemt of m and adding 1
+b is taking the complement of x and adding 1
+adding x with a 
+adding b with n
+returning not ( a or b) ..the output could be 1 or 0, 
+however when you right shift 0 or 1....31 times..the return value 
+going to be 0.
+*/
+
 int ques12(int x, int m, int n) {
     int a = ~m+1;
     int b = ~x +1;
@@ -305,6 +314,12 @@ int ques12(int x, int m, int n) {
     b = b + n;
 
     return !((a|b) >> 31);
+}
+//answer to question 12
+int ans12(int x,int y,int n){
+     x=0;
+     y=1;
+    return (x&y);
 }
 
 /* question 13 */
