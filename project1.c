@@ -271,7 +271,7 @@ int ans10(intx){
 
 /* x right shift 31 times
  * y right shift 31 times, which will not return 1 for b. it will only return -1,and 0
- * lastly if a=0,b=0, it will
+ * lastly if a=0,b=0, it will return 0;
  * if a=-1, and b=-1, it will return 0;
  * if a=0, and b=0, it will return  0;
  * if a=-1 and b=0, it will return 1
