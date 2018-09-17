@@ -8,3 +8,13 @@ Ridoy Muhammed
 Part A: Questions 1 - 15 Explanations:
 
 ----------Question 1----------
+
+
+----------Question 6----------
+The function essentially takes 'byte', which is hex number 0x55, 
+binary (01010101) and shifts it over 24 spaces, making 
+01010101000000000000000000000000 and fills the 0's with 'byte' 
+repeating three times. Making the final binary 4 concatinated 'bytes'.
+Another int 'word' is created but is simply two 'bytes' 
+concatinated and serves only to shorten the procedure in joining the
+4 'byte' binary strings.

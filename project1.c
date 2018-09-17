@@ -169,6 +169,11 @@ int ques6(void) {
     return word | word<<16;
 }
 
+int ans6(void){
+  int byte = 0x55;
+  return (byte<<24) + (byte<<16) + (byte<<8) + (byte);
+}
+
 
 /* question 7 */
 
