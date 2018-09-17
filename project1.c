@@ -152,12 +152,27 @@ int ans4(int n) {
 
 /* question 5 */
 
+/* if x=0, return 0, 
+ the input is even return 0, otheriwse return -1
+*/
+
 int ques5(int x) {
-    int result = (x<<31);
-    result = (result >> 31);
+    int result = (x<<31); //bitshift x to the left 31 times 
+    result = (result >> 31);//bitshifht the result right 31 times 
 
     return result;
 
+}
+//answer for question 5
+int ans5 (int x){
+    if (x==0){
+        return 0;
+    }
+    else if (x%2==0){
+        return 0;
+    }
+    else
+        return -1;
 }
 
 /* question 6 */
@@ -190,12 +205,38 @@ int ques7(int x) {
 
 
 /* question 8 */
+/* x right shift 31, makes y=0;
+ z not not x makes z=1;
+ returns true because 0 or 1, its always 1
+ */
+
 int ques8(int x) {
     int y = x >> 31;
     int z = !!x;
 
     return y | z;
 }
+
+//anser to question 8
+
+int ans8 (int x){
+
+    if(x==0) {
+        return 0;
+    }
+    else if (x<0){
+        return -1;
+    }
+    else
+        return 1;
+
+}
+
+ 
+
+
+
+
 
 /* question 9 */
 
@@ -211,6 +252,11 @@ int ques9(int x, int n, int c) {
 
 /* question 10 */
 
+/* y takes not not x; which always return 1;
+ then z first do (x+x) operations, which makes 1 , then not  makes z= 0;
+0 and 1, will always give you 0;
+ */
+
 int ques10(int x) {
     int y = !!x;
     int z = (!(x+x));
@@ -219,13 +265,43 @@ int ques10(int x) {
 }
 
 
+//answer to question 10
+
+int ans10(intx){
+    int a=0;
+    int b=1;
+    return a&b;
+
+}
+
 /* question 11 */
+/*
+ * x right shift 31 times
+ * y right shift 31 times, which will not return 1 for b. it will only return -1,and 0
+ * lastly if a=0,b=0, it will
+ * if a=-1, and b=-1, it will return 0;
+ * if a=0, and b=0, it will return  0;
+ * if a=-1 and b=0, it will return 1
+*/
 
 int ques11(int x, int y) {
     int a = x >> 31;
     int b = y >> 31;
 
     return !((!a & b) | (!(a ^ b) & (y+~x)>>31));
+}
+
+
+//answer to question 11
+
+int ans11(int x,int y)
+{
+    if(x==y||x>y){
+        return 0;
+    }
+    else
+        return 1;
+
 }
 
 
